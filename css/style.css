@@ -1,0 +1,174 @@
+body {
+  background: #000;
+  color: #edbe00;
+  font-size: 100%;
+  font-family: "Roboto";
+}
+header {
+  margin-bottom: 10em;
+}
+nav {
+  background: #000;
+}
+nav a {
+  margin: 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  animation: all 0.5s ease;
+}
+a::before {
+  display: block;
+  content: "";
+  width: 0em;
+}
+a:hover {
+  transform: scale(1.1);
+  color: inherit;
+}
+a::before:hover {
+  width: 1em;
+}
+a:active {
+  transform: scale(1);
+}
+.bottom {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../images/analogue-2974647_1280.jpg");
+  background-size: cover;
+  text-align: center;
+  display: inline-block;
+  height: 30em;
+  color: #afaaaa;
+  padding-top: 10em;
+  position: relative;
+}
+.bottom .text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.content {
+  margin: 0em 3em;
+}
+
+.container-fluid {
+  padding: 1em 3em;
+}
+.featured {
+  padding: 1% 3%;
+}
+
+.featured-1,
+.featured-2,
+.featured-3,
+.featured-4 {
+  position: relative;
+}
+.featured img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.featured .artical-info {
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5% 10%;
+}
+.top10 button {
+  margin-bottom: auto;
+}
+.movie {
+  position: relative;
+  background: #000;
+  margin: 0.5em;
+}
+.movie img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.movie .artical-info {
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2% 5%;
+}
+
+.artical-info {
+  color: white;
+  line-height: 100%;
+}
+.featured .artical-info {
+  font-size: 120%;
+}
+.featured-1:hover img,
+.featured-2:hover img,
+.featured-3:hover img,
+.movie:hover img {
+  opacity: 0.6;
+}
+.featured-1:hover .artical-info,
+.featured-2:hover .artical-info,
+.featured-3:hover .artical-info,
+.movie:hover .artical-info {
+  opacity: 1;
+}
+.coming input,
+.coming input:focus {
+  background: #231f20;
+  color: #edbe00;
+  margin-bottom: 1em;
+  outline: none;
+}
+
+.coming input::placeholder {
+  color: #edbe00;
+}
+
+.app-download .text-area {
+  text-align: center;
+  padding: 3em;
+  margin: auto 2em;
+}
+
+.app-download h1 {
+  font-size: 5vw;
+}
+.app-download .links {
+  margin: auto;
+}
+.app-download .text-area img {
+  width: auto;
+  height: 3em;
+  margin: 1em;
+}
+.icons a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.info-container {
+  height: 50em;
+}
