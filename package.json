@@ -1,0 +1,23 @@
+{
+  "name": "renvies",
+  "version": "1.0.0",
+  "description": "movie rentals",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogunsolahabib/renvies.git"
+  },
+  "author": "ogunsolahabib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogunsolahabib/renvies/issues"
+  },
+  "homepage": "https://github.com/ogunsolahabib/renvies#readme"
+}
