@@ -187,10 +187,10 @@ function maxInfo() {
               <h2>Plot</h2>
               <p>${movie.Plot}</p>
               <hr>
-              <a href="http://imdb.com/title/${
-                movie.imdbID
-              }" target=_blank" class="btn btn-primary">View IMDB</a>
-              <a href="index.html" class="btn btn-default">Go back to Search</a>
+              <a  class="btn btn-danger pl-6 mr-5">
+            Rent Now for &#8358;1000
+          </a>
+              <a href="index.html" class="btn btn-outline-danger">Add to watchlist</a>
             </div>
           </div>
         </div>
