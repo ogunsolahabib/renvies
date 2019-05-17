@@ -159,7 +159,7 @@ function maxInfo() {
             <img src="${movie.Poster}" class="thumbnail">
           </div>
           <div class="col-md-8">
-            <h2>${movie.Title}</h2>
+            <h1>${movie.Title}</h1>
             <ul class="list-group">
               <li class="list-group-item"><strong>Genre: </strong>${
                 movie.Genre
@@ -167,10 +167,13 @@ function maxInfo() {
               <li class="list-group-item"><strong>Released: </strong>${
                 movie.Released
               }</li>
+              <li class="list-group-item"><strong>Duration: </strong>${
+                movie.Runtime
+              }</li>
               <li class="list-group-item"><strong>Rated: </strong>${
                 movie.Rated
               }</li>
-              <li class="list-group-item"><strong>IMDB Rating: </strong>${
+              <li class="list-group-item"><strong>Rating: </strong>${
                 movie.imdbRating
               }</li>
               <li class="list-group-item"><strong>Director: </strong>${
@@ -182,15 +185,21 @@ function maxInfo() {
               <li class="list-group-item"><strong>Actors: </strong>${
                 movie.Actors
               }</li>
+              <li class="list-group-item"><strong>Production: </strong>${
+                movie.Production
+              }</li>
+              <li class="list-group-item"><strong>Language: </strong>${
+                movie.Language
+              }</li>
             </ul>
             <div class="well">
-              <h2>Plot</h2>
+              <h3>Synopsis</h3>
               <p>${movie.Plot}</p>
               <hr>
               <a  class="btn btn-danger pl-6 mr-5">
             Rent Now for &#8358;1000
           </a>
-              <a href="index.html" class="btn btn-outline-danger">Add to watchlist</a>
+              <a href="index.html" class="btn btn-outline-danger">Add to wishlist</a>
             </div>
           </div>
         </div>
@@ -198,6 +207,34 @@ function maxInfo() {
         </div>
       `;
       $("#movie").html(output);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+function searchResult(searchText) {
+  console.log(searchText);
+  axios
+    .get("http://www.omdbapi.com?s=" + searchText + "&apikey=2728c457")
+    .then(response => {
+      console.log(response);
+      let movies = response.data.Search;
+      let output = "";
+      $.each(movies, (index, movie) => {
+        output += `
+          <div class="col-md-3 m-4">
+          <div class="well text-center">
+          <img src="${movie.Poster}">
+          <h5>${movie.Title}</h5>
+          <a onclick="movieSelected('${
+            movie.imdbID
+          }')" class="btn btn-primary href="#">Movie Details</a>
+          </div>
+          </div>
+          `;
+      });
+      $("#movie-listing").html(output);
     })
     .catch(err => {
       console.log(err);

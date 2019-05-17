@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Explore Renvies</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -21,7 +22,7 @@
       <nav class="navbar  navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
               <img src="images/logo.png" alt="logo" style="width:40px;" />
               <span>Renvies</span></a
             >
@@ -58,7 +59,7 @@
     </header>
 
     <div class="container-fluid">
-      <div class=" side-nav">
+      <div class="side-nav">
         <ul class="list-group">
           <li class="list-group-item"><a href="">All</a></li>
           <li class="list-group-item"><a href="">Top</a></li>
@@ -71,18 +72,25 @@
         </ul>
       </div>
       <div class="content-list">
-        <div class="input-group m-auto">
+        <form id="form" class="input-group m-auto">
           <input
             type="text"
             class="form-control"
             placeholder="Search this blog"
+            id="field"
           />
           <div class="input-group-append">
-            <button class="btn btn-secondary" type="button">
+            <button
+              class="btn btn-secondary"
+              id="search-btn"
+              type="submit"
+              value="submit"
+            >
               <i class="fa fa-search"></i>
             </button>
           </div>
-        </div>
+        </form>
+        <div id="movie-listing" class="container row"></div>
       </div>
     </div>
 
@@ -170,6 +178,14 @@
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
-    <script></script>
+    <script>
+      $(document).ready(() => {
+        $("#form").on("submit", e => {
+          let searchText = $("#field").val();
+          searchResult(searchText);
+          e.preventDefault();
+        });
+      });
+    </script>
   </body>
 </html>
