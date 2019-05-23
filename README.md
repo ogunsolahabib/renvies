@@ -1,2 +1,7 @@
 # renvies
-stutern front end mini Group 1
+
+Stutern Front-end Mini Project (Group 1)
+Habib Ogunsola
+Tosin Israel
+Joshua Chioma
+Omoyemi Arigbanla
