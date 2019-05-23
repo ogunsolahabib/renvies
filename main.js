@@ -22,7 +22,6 @@ function minInfo(id, element) {
         <img
         class="img-fluid"
         src="${poster}"
-        title="post-name"
       />
 
       <div class="artical-info">
@@ -212,7 +211,17 @@ function maxInfo() {
       console.log(err);
     });
 }
-
+function exploreMovies(page) {
+  axios
+    .get("http://www.omdbapi.com?page=" + page + "&apikey=2728c457")
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
+window.loaction === "explore.html" ? exploreMovies(1) : null;
 function searchResult(searchText) {
   console.log(searchText);
   axios

@@ -19,18 +19,12 @@ a {
   color: inherit;
   animation: all 0.5s ease;
 }
-a::before {
-  display: block;
-  content: "";
-  width: 0em;
-}
+
 a:hover {
   transform: scale(1.1);
   color: inherit;
 }
-a::before:hover {
-  width: 1em;
-}
+
 a:active {
   transform: scale(1);
 }
@@ -55,14 +49,16 @@ a:active {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .content {
-  margin: 0em 3em;
+  margin: 0em 12em;
 }
 
-.container-fluid {
-  padding: 1em 3em;
+.main.container-fluid {
+  padding: 1em;
+  
 }
-.featured {
-  padding: 1% 3%;
+.featured, .new-movies, .new-releases, .coming-soon{
+  padding: 1em;
+  margin-bottom: 2em;
 }
 
 .featured-1,

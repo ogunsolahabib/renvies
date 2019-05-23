@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Explore Renvies</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -76,7 +76,7 @@
           <input
             type="text"
             class="form-control"
-            placeholder="Search this blog"
+            placeholder="Search movies"
             id="field"
           />
           <div class="input-group-append">
@@ -179,6 +179,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     <script>
+      exploreMovies(1);
       $(document).ready(() => {
         $("#form").on("submit", e => {
           let searchText = $("#field").val();
