@@ -49,14 +49,16 @@ a:active {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .content {
-  margin: 0em 12em;
+  margin: 0em 6em;
 }
 
 .main.container-fluid {
   padding: 1em;
-  
 }
-.featured, .new-movies, .new-releases, .coming-soon{
+.featured,
+.new-movies,
+.new-releases,
+.coming-soon {
   padding: 1em;
   margin-bottom: 2em;
 }
@@ -166,7 +168,7 @@ a:active {
 }
 
 .info-container {
-  height: 50em;
+  height: auto;
 }
 .side-nav {
   height: 100%;
@@ -185,5 +187,13 @@ a:active {
 }
 .list-group-item {
   background: #000;
-  margin-left: 1em;
+}
+footer {
+  width: 60%;
+  margin: 5em auto;
+  text-align: center;
+}
+.result-image {
+  height: 40vh;
+  width: 100%;
 }

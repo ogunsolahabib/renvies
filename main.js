@@ -122,18 +122,18 @@ function minInfo(id, element) {
 }
 
 minInfo("tt4154796", $(".featured-1"));
-minInfo("tt5884052", $(".featured-2"));
-minInfo("tt1298644", $(".featured-3"));
+minInfo("tt6139732", $(".featured-2"));
+minInfo("tt6146586", $(".featured-3"));
 minInfo("tt4154796", $(".trending:eq(0)"));
 minInfo("tt6722030", $(".trending:eq(1)"));
-minInfo("tt5884052", $(".trending:eq(2)"));
-minInfo("tt2139881", $(".trending:eq(3)"));
+minInfo("tt6139732", $(".trending:eq(2)"));
+minInfo("tt7752126", $(".trending:eq(3)"));
 minInfo("tt1298644", $(".trending:eq(4)"));
 minInfo("tt6146586", $(".new-release:eq(0)"));
 minInfo("tt6423362", $(".new-release:eq(1)"));
 minInfo("tt6920356", $(".new-release:eq(2)"));
-minInfo("tt6139732", $(".coming:eq(0)"));
-minInfo("tt1489887", $(".coming:eq(1)"));
+minInfo("tt6107548", $(".coming:eq(0)"));
+minInfo("tt6565702", $(".coming:eq(1)"));
 
 function movieSelected(id) {
   sessionStorage.setItem("movieId", id);
@@ -157,8 +157,8 @@ function maxInfo() {
           <div class="col-md-4">
             <img src="${movie.Poster}" class="thumbnail">
           </div>
-          <div class="col-md-8">
-            <h1>${movie.Title}</h1>
+          <div class="col-md-6">
+            <h1 class= "text-center">${movie.Title}</h1>
             <ul class="list-group">
               <li class="list-group-item"><strong>Genre: </strong>${
                 movie.Genre
@@ -221,7 +221,7 @@ function exploreMovies(page) {
       console.log(error);
     });
 }
-window.loaction === "explore.html" ? exploreMovies(1) : null;
+window.loaction === "explore.html" ? exploreMovies() : null;
 function searchResult(searchText) {
   console.log(searchText);
   axios
@@ -232,15 +232,22 @@ function searchResult(searchText) {
       let output = "";
       $.each(movies, (index, movie) => {
         output += `
-          <div class="col-md-3 m-4">
-          <div class="well text-center">
-          <img src="${movie.Poster}">
-          <h5>${movie.Title}</h5>
+        <div class= "col-md-3 m-auto">
+        <img src="${movie.Poster}" class="result-image img-fluid" />
+          <div class="artical-info">
+          <h4>${movie.Title}</h4>
+          <p><strong>Released:</strong> ${movie.Year}</p>
+      
           <a onclick="movieSelected('${
             movie.imdbID
-          }')" class="btn btn-primary href="#">Movie Details</a>
-          </div>
-          </div>
+          }')" class="btn btn-secondary mr-1">
+            More info
+          </a>
+          <a  class="btn btn-warning ml-1">
+            Rent Now
+          </a>
+        </div>
+        </div>
           `;
       });
       $("#movie-listing").html(output);
